@@ -14,6 +14,5 @@ Convertipy is a python program that can convert:
 - Hexadecimal to Octal
 ***
 > [!NOTE]
-> This repository is create by me, PnK-7
-> Im looking for a **_FRIEND_**
+> This repository is create by me, PnK-7<br>Im looking for a **_FRIEND_**
 
