@@ -3,7 +3,7 @@ def decToBin():
   try:
     inp = int(input("Enter the Decimal : "))
   except:
-    print("Enter only decimal! Program Out!")
+    print("Enter decimal only! Program Out!")
   def cal(value):
     pre = []
     b = value
