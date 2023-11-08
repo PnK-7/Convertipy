@@ -1,9 +1,7 @@
 import os
 import time
 from list.decToBin import *
-from list.binToDec import *
-#from list.ocToDec import *
-#from list.hexToDec import *
+from list.bin_oc_hexToDec import *
 
 if __name__ == '__main__':
   os.system("clear")
@@ -18,5 +16,9 @@ if __name__ == '__main__':
     decToBin()
   elif inp == 2:
     binToDec()
+  elif inp == 3:
+    ocToDec()
+  #elif inp == 4:
+  #  hexToDec()
   else:
     print("Please enter number that exist on the list, except 3,4...etc until next update.")
