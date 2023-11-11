@@ -18,7 +18,7 @@ if __name__ == '__main__':
     binToDec()
   elif inp == 3:
     ocToDec()
-  #elif inp == 4:
-  #  hexToDec()
+  elif inp == 4:
+    hexToDec()
   else:
     print("Please enter number that exist on the list, except 3,4...etc until next update.")
