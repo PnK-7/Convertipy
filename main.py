@@ -1,11 +1,11 @@
 import os
 import time
-from list.decToBin import *
-from list.bin_oc_hexToDec import *
+from list.toBinary import *
+from list.toDecimal import *
 
 if __name__ == '__main__':
   os.system("clear")
-  print("1. Decimals to Binary\n2. Binary to Decimals\n3. Octal to Decimals\n4. Hexadecimal to Decimals\n0. Exit")
+  print("1. Binary to Decimals\n2. Octal to Decimals\n3. Hexadecimal to Decimals\n4. Decimal to Binary\n5. Octal to Binary\n0. Exit")
   try:
     inp = int(input("Choose one : "))
   except:
@@ -13,12 +13,14 @@ if __name__ == '__main__':
   if inp == 0:
     print("Out!")
   elif inp == 1:
-    decToBin()
+    print(binToDec())
   elif inp == 2:
-    binToDec()
+    print(ocToDec())
   elif inp == 3:
-    ocToDec()
+    print(hexToDec())
   elif inp == 4:
-    hexToDec()
+    print(decToBin())
+  elif inp == 5:
+    print(ocToBin())
   else:
     print("Please enter number that exist on the list, except 3,4...etc until next update.")
