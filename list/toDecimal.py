@@ -24,12 +24,9 @@ def ocToDec():
   tmp = str(inp)
   test = [*tmp]
   for i in test:
-    if i not in noB:
-      calc(inp, 8, "Octal", 0)
-      break
-    else:
-      print("Enter Octal only! Program Out!")
-      break
+    if i in noB:
+      return "Enter Octal only! Program Out!"
+  calc(inp, 8, "Octal", 0)
 
 def hexToDec():
   try:
