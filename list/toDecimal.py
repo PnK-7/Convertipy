@@ -9,7 +9,7 @@ def binToDec():
   test = [*tmp]
   for i in test:
     if i not in noB:
-      calc(inp, 2, "Binary", 0)
+      return calc(inp, 2, "Binary", 0)
       break
     else:
       print("Enter Binary only! Program Out!")
@@ -26,7 +26,7 @@ def ocToDec():
   for i in test:
     if i in noB:
       return "Enter Octal only! Program Out!"
-  calc(inp, 8, "Octal", 0)
+  return calc(inp, 8, "Octal", 0)
 
 def hexToDec():
   try:
@@ -38,10 +38,10 @@ def hexToDec():
   test = [*tmp]
   for i in test:
     if i in noB:
-      print("jagqj")
+      print("Enter Hexadecimal only! Program Out!")
       break
     else:
-      calc(tmp, 16, "Hexadecimal", 1)
+      return calc(tmp, 16, "Hexadecimal", 1)
       break
   
 def calc(nums, val, pro, det):
@@ -85,4 +85,6 @@ def calc(nums, val, pro, det):
       counter += 1
       pre.append(x)
   hasil = sum(pre)
-  print(f"{pro} \"{b}\" to Decimal is : {hasil}")
+  haha = (f"{pro} \"{b}\" to Decimal is : {hasil}")
+  return haha
+

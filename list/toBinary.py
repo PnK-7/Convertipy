@@ -2,9 +2,9 @@
 def decToBin():
   try:
     inp = int(input("Enter the Decimal : "))
+    return cal(inp, "Decimal", inp)
   except:
     print("Enter decimal only! Program Out!")
-  cal(inp, "Decimal", inp)
 
 def ocToBin():
   try:
@@ -46,4 +46,5 @@ def cal(value, pro, ori):
     pre.insert(0, c)
     value = int(value / 2)
   hasil = "".join(pre)
-  print(f"{pro} \"{ori}\" to Binary is : {hasil}")
+  final = (f"{pro} \"{ori}\" to Binary is : {hasil}")
+  return final

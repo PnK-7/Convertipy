@@ -4,6 +4,7 @@ from list.toBinary import *
 from list.toDecimal import *
 
 if __name__ == '__main__':
+  os.system("rm -rf list/__pycache__")
   os.system("clear")
   print("1. Binary to Decimals\n2. Octal to Decimals\n3. Hexadecimal to Decimals\n4. Decimal to Binary\n5. Octal to Binary\n0. Exit")
   try:
