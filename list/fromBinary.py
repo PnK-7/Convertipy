@@ -5,13 +5,16 @@ def fromB():
     return "Enter Binary only! Program Out!"
   decimals = ['2', '3', '4', '5', '6', '7', '8', '9']
   tmp = str(inp)
+  counter = 0
   test = [*tmp]
   for i in test:
     if i in decimals:
       print("Enter Binary only! Program Out!")
       break
     else:
-      result = (f"To Decimal : {toDec(inp)}\nTo Octadecimal : {toOct()}\nTo Hexadecimal : {toHex()}")
+      counter += 1
+    if counter == len(test):
+      result = (f"To Decimal : {toDec(inp)}\nTo Octadecimal : {toOct(inp)}\nTo Hexadecimal : {toHex()}")
       return result
 
 def toDec(inp):
@@ -27,7 +30,19 @@ def toDec(inp):
     result.append(x)
     final = sum(result)
   return final
-def toOct():
-  return "toOct"
+def toOct(inp):
+  decimal = toDec(inp)
+  result = []
+  counter = 0
+  test = str(inp)
+  test = [*test]
+  while decimal > 0:
+    divide = decimal / 8
+    decimal = int(divide)
+    reminder = divide - decimal
+    reminder = str(int(reminder * 8))
+    result.insert(0, reminder)
+  result = "".join(result)
+  return result
 def toHex():
   return "toHex"

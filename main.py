@@ -1,11 +1,10 @@
 import os
 import time
 from list.fromBinary import *
-#from list.fromDecimal import *
+from list.fromDecimal import *
 
 if __name__ == '__main__':
   os.system("rm -rf list/__pycache__")
-  os.system("clear")
   print("1. From Binary to any\n2. From Decimal to any\n0. Exit")
   try:
     inp = int(input("Choose one : "))
