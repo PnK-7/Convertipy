@@ -14,7 +14,7 @@ def fromB():
     else:
       counter += 1
     if counter == len(test):
-      result = (f"To Decimal : {toDec(inp)}\nTo Octadecimal : {toOct(inp)}\nTo Hexadecimal : {toHex()}")
+      result = (f"To Decimal : {toDec(inp)}\nTo Octadecimal : {toOct(inp)}\nTo Hexadecimal : {toHex(inp)}")
       return result
 
 def toDec(inp):
@@ -33,9 +33,6 @@ def toDec(inp):
 def toOct(inp):
   decimal = toDec(inp)
   result = []
-  counter = 0
-  test = str(inp)
-  test = [*test]
   while decimal > 0:
     divide = decimal / 8
     decimal = int(divide)
@@ -44,5 +41,29 @@ def toOct(inp):
     result.insert(0, reminder)
   result = "".join(result)
   return result
-def toHex():
-  return "toHex"
+def toHex(inp):
+  decimal = toDec(inp)
+  result = []
+  counter = 0
+  while decimal > 0:
+    divide = decimal / 16
+    decimal = int(divide)
+    reminder = divide - decimal
+    reminder = str(int(reminder * 16))
+    result.insert(0, reminder)
+  for i in result:
+    if i == '10':
+      result[counter] = 'A'
+    if i == '11':
+      result[counter] = 'B'
+    if i == '12':
+      result[counter] = 'C'
+    if i == "13":
+      result[counter] = 'D'
+    if i == '14':
+      result[counter] = 'E'
+    if i == '15':
+      result[counter] = 'F'
+    counter += 1
+  result = "".join(result)
+  return result
